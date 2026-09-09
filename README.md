@@ -1,4 +1,4 @@
-# Hamilton
+# Apollo Guidance
 
 Luminary 099 P63 execution in VirtualAGC.
 
