@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "source": "results/bench/dsky.json",
+      "sha256": "89276b554393af2e855c930ee5a9efe5003b761efbf91fc2e267707bedfbe911"
+    },
+    {
+      "source": "results/bench/trace.csv",
+      "sha256": "5a4f0b7262381c23ba5377c9bb289beea128704cb5d0f77c6fe78b01ff6d8192"
+    }
+  ]
+}
