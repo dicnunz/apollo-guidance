@@ -1,0 +1,11 @@
+{
+  "source_commit": "ebd8695d23bde6eb9f26933ddf244b8d18987f21",
+  "reference_binary_matches": true,
+  "binary_bytes": 73728,
+  "files": {
+    "yaAGC/agc_engine.c": "9c59728cdd968503caaaafe50a18ab3ed841f6176da3299c137f3a6a158fcbef",
+    "yaAGC/agc_engine_init.c": "7cc75c5f92b32a02e3553ee23cda10dc91e83ebdf4a9ca4d8a8248d6b33af4c1",
+    "Luminary099/Luminary099.binsource": "edad1f7d07f2ac9b35ac47a96b223cbbe96535c0ea1daf323e2e830a924abe93",
+    "Luminary099/MAIN.agc.bin": "1f5326e038de5b741b2f27b01ec949dbd688cf1906994e997402587c8628f40e"
+  }
+}

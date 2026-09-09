@@ -1,0 +1,35 @@
+{
+  "duration_seconds": 30,
+  "machine_cycles": 2560000,
+  "instruction_count": 1547922,
+  "p63_native_count": 16,
+  "p63_interpretive_pair_fetches": 22,
+  "guidance_interpretive_pair_fetches": 35,
+  "native_path_entry_cycles": {
+    "32,2776": "891789",
+    "31,2455": "942000",
+    "31,3733": "960070"
+  },
+  "last_dsky": {
+    "cycle": 2550008,
+    "t": 29.88290625,
+    "P": "  ",
+    "V": "05",
+    "N": "09",
+    "R1": "01406",
+    "R2": "00000",
+    "R3": "00000",
+    "signs": {
+      "R1": " ",
+      "R2": " ",
+      "R3": " "
+    },
+    "lights": {
+      "115": 144,
+      "9": 8240
+    },
+    "relay12": 24832
+  },
+  "alarm_01406_displayed": true,
+  "initialized_fixture": "hypothetical lunar orbit and aligned identity reference; no mission telemetry or spacecraft dynamics"
+}
