@@ -10,7 +10,7 @@ The initialized test executes P63 and its guidance equations, then reports **014
 
 ## Run
 
-Requires Python 3.12, Git, GCC, Make and FFmpeg. The simulation runs on a CPU and takes about a second for 30 simulated seconds in this environment.
+Requires Python 3.12, Git, GCC, Make, FFmpeg (with ffprobe), and the DejaVu fonts at the Debian/Ubuntu `fonts-dejavu-core` paths under `/usr/share/fonts/truetype/dejavu/`. The simulation runs on a CPU and takes about a second for 30 simulated seconds in this environment.
 
 ```bash
 python -m venv .venv

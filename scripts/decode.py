@@ -6,7 +6,7 @@ DIGITS={0:' ',21:'0',3:'1',25:'2',27:'3',15:'4',30:'5',28:'6',19:'7',29:'8',31:'
 ROWS={11:[('P',0),('P',1)],10:[('V',0),('V',1)],9:[('N',0),('N',1)],8:[None,('R1',0)],7:[('R1',1),('R1',2)],6:[('R1',3),('R1',4)],5:[('R2',0),('R2',1)],4:[('R2',2),('R2',3)],3:[('R2',4),('R3',0)],2:[('R3',1),('R3',2)],1:[('R3',3),('R3',4)]}
 
 def dsky(path):
-    d={k:[' ']*n for k,n in [('P',2),('V',2),('N',2),('R1',5),('R2',5),('R3',5)]};relays={};events=[];lights={};signs={'R1':[0,0],'R2':[0,0],'R3':[0,0]}
+    d={k:[' ']*n for k,n in [('P',2),('V',2),('N',2),('R1',5),('R2',5),('R3',5)]};relays={};events=[{'cycle':0,'t':0.0,**{k:''.join(v) for k,v in d.items()},'signs':{'R1':' ','R2':' ','R3':' '},'lights':{},'relay12':0}];lights={};signs={'R1':[0,0],'R2':[0,0],'R3':[0,0]}
     for x in csv.DictReader(path.open()):
         c=int(x['channel'],8);v=int(x['value'],8);cycle=int(x['cycle']);row=v>>11
         if c==0o10:
@@ -18,7 +18,7 @@ def dsky(path):
                 r={7:'R1',6:'R1',5:'R2',4:'R2',2:'R3',1:'R3'}[row];i=0 if row in[7,5,2] else 1;signs[r][i]=bool(v&0o2000)
         if c in [0o11,0o163]:lights[str(c)]=v
         if c!=0o15:
-            events.append({'cycle':cycle,'t':cycle*12/1024000,**{k:''.join(v) for k,v in d.items()},'signs':{k:'+' if v[0] and not v[1] else '-' if v[1] and not v[0] else ' ' for k,v in signs.items()},'lights':dict(lights),'relay12':relays.get(12,0)})
+            events.append({'cycle':cycle,'t':cycle*12/1024000,**{k:''.join(v) for k,v in d.items()},'signs':{k:'+' if v[0] else '-' if v[1] else ' ' for k,v in signs.items()},'lights':dict(lights),'relay12':relays.get(12,0)})
     return events
 
 def listing():

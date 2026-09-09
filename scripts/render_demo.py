@@ -63,7 +63,7 @@ def live(t,slow=False):
  else:
   txt(d,(94,382),'V36E   Fresh start',31,FG,mono=True);txt(d,(94,451),'V37E63E   Request program 63',31,FG,mono=True)
   txt(d,(94,556),'Keystrokes enter channel 015.',24,MUTED);txt(d,(94,599),'The flight program controls every displayed digit.',24,MUTED)
- snap=SNAPS[max(0,bisect.bisect_right(ST,t)-1)];txt(d,(70,848),f"{int(snap['instructions']):,}",52,GREEN,bold=True);txt(d,(73,916),'executed native instructions',22,MUTED)
+ snap_index=bisect.bisect_right(ST,t)-1;snap=SNAPS[snap_index] if snap_index>=0 else {'instructions':0};txt(d,(70,848),f"{int(snap['instructions']):,}",52,GREEN,bold=True);txt(d,(73,916),'executed native instructions',22,MUTED)
  txt(d,(637,853),'SYNTHETIC STATE FIXTURE',21,AMBER,bold=True);txt(d,(637,895),'Aligned reference; hypothetical orbit.',20,MUTED);txt(d,(637,931),'No spacecraft dynamics or mission telemetry.',19,MUTED)
  return im
 
