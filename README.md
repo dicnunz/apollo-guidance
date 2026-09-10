@@ -1,15 +1,23 @@
 # Apollo Guidance
 
-[Explore recorded results](https://dicnunz.github.io/demos/apollo-guidance/).
-[Browser inspection source](web/index.html). Open `web/index.html` locally to explore the recorded results; no server or install is needed. Validate the bundle with `python3 scripts/verify_web.py` and `node tests/web_controls.cjs`.
-
 Luminary 099 P63 execution in VirtualAGC.
+
+[Explore recorded results](https://dicnunz.github.io/demos/apollo-guidance/)
 
 ![P63 listing and recorded DSKY output](demo/execution.png)
 
 [Video](demo/hamilton.mp4) · [Trace](results/bench/trace.csv) · [Results](results/bench/summary.json)
 
 The 30-second run reaches alarm **01406** (`ROOTPSRS` bad return). Initial conditions are synthetic; spacecraft dynamics are absent. No landing is simulated.
+
+## Inspect locally
+
+Open [web/index.html](web/index.html) in a browser; no installation is needed. To check the saved assets and controls:
+
+```sh
+python3 scripts/verify_web.py
+node tests/web_controls.cjs
+```
 
 ## Run
 
